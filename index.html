@@ -3,8 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FodderCube — Hydroponic Fodder Systems</title>
-    <meta name="description" content="Fresh fodder in 5 days. 95% less water. Engineered in the UAE.">
+    <title>FodderCube — Hydroponic Fodder Systems | Fresh Feed in 5 Days</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="FodderCube hydroponic fodder systems produce fresh, nutritious feed in just 5 days using 95% less water. Self-contained units engineered for any climate. From RKD Bio.">
+    <meta name="keywords" content="hydroponic fodder, fodder system, horse feed, equine nutrition, fresh fodder, water efficient farming, sustainable agriculture, indoor farming, barley fodder, UAE agriculture">
+    <meta name="author" content="FodderCube by RKD Bio">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://foddercube.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://foddercube.com">
+    <meta property="og:title" content="FodderCube — Hydroponic Fodder Systems">
+    <meta property="og:description" content="Fresh fodder in 5 days. 95% less water. Self-contained hydroponic systems engineered for any climate.">
+    <meta property="og:image" content="https://foddercube.com/hero.jpg">
+    <meta property="og:site_name" content="FodderCube">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://foddercube.com">
+    <meta name="twitter:title" content="FodderCube — Hydroponic Fodder Systems">
+    <meta name="twitter:description" content="Fresh fodder in 5 days. 95% less water. Self-contained hydroponic systems engineered for any climate.">
+    <meta name="twitter:image" content="https://foddercube.com/hero.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "FodderCube Hydroponic Fodder System",
+        "description": "Self-contained hydroponic fodder growing system that produces fresh feed in 5 days using 95% less water than traditional farming.",
+        "brand": {
+            "@type": "Brand",
+            "name": "FodderCube"
+        },
+        "manufacturer": {
+            "@type": "Organization",
+            "name": "RKD Bio",
+            "url": "https://rkdbio.com"
+        },
+        "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStock",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2061,6 +2110,266 @@
             background: var(--border);
             margin: 0;
         }
+
+        /* ===========================================
+           MOBILE SWIPE OPTIMIZATIONS
+           =========================================== */
+        
+        /* Swipe hint indicator */
+        .swipe-hint {
+            display: none;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 16px;
+            text-align: center;
+        }
+        
+        .swipe-hint::after {
+            content: ' →';
+            animation: swipeHint 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes swipeHint {
+            0%, 100% { opacity: 0.5; transform: translateX(0); }
+            50% { opacity: 1; transform: translateX(4px); }
+        }
+
+        @media (max-width: 768px) {
+            .swipe-hint {
+                display: block;
+            }
+            
+            /* Products - Horizontal Scroll */
+            .products-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                gap: 16px;
+                padding-bottom: 16px;
+                margin: 0 -24px;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            
+            .products-grid::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .products-grid .product-card {
+                flex: 0 0 280px;
+                scroll-snap-align: start;
+            }
+            
+            /* Process Steps - Horizontal Scroll */
+            .process-section {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                gap: 16px;
+                padding-bottom: 16px;
+                margin: 0 -24px;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            
+            .process-section::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .process-item {
+                flex: 0 0 280px;
+                scroll-snap-align: start;
+                border-bottom: none !important;
+                padding: 24px;
+                background: var(--bg-white);
+                border-radius: 16px;
+                border: 1px solid var(--border) !important;
+            }
+            
+            /* Benefits Grid - Horizontal Scroll */
+            .benefits-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                gap: 16px;
+                padding-bottom: 16px;
+                margin: 0 -24px;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            
+            .benefits-grid::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .benefits-grid .benefit-card {
+                flex: 0 0 260px;
+                scroll-snap-align: start;
+            }
+            
+            /* App Features - Horizontal Scroll */
+            .app-features {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                gap: 12px;
+                padding-bottom: 16px;
+                margin: 0 -24px;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            
+            .app-features::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .app-feature {
+                flex: 0 0 280px;
+                scroll-snap-align: start;
+            }
+            
+            /* Specs Tabs - Scrollable */
+            .specs-tabs {
+                display: flex;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                gap: 8px;
+                padding-bottom: 8px;
+                margin-bottom: 24px;
+            }
+            
+            .specs-tabs::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .specs-tab {
+                flex: 0 0 auto;
+                white-space: nowrap;
+            }
+            
+            /* Card Grid - Horizontal Scroll */
+            .card-grid {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                -webkit-overflow-scrolling: touch;
+                gap: 16px;
+                padding-bottom: 16px;
+                margin: 0 -24px;
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+            
+            .card-grid::-webkit-scrollbar {
+                display: none;
+            }
+            
+            .card-grid .card {
+                flex: 0 0 300px;
+                scroll-snap-align: start;
+            }
+            
+            /* Stats Grid - 2x2 stays but tighter */
+            .stats-grid {
+                gap: 16px;
+            }
+            
+            .stat-item h3 {
+                font-size: 1.5rem;
+            }
+            
+            /* General mobile spacing */
+            section {
+                padding: 60px 0;
+            }
+            
+            .section-header {
+                margin-bottom: 32px;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            /* Hero mobile optimization */
+            .hero {
+                min-height: 100svh;
+                min-height: -webkit-fill-available;
+            }
+            
+            .hero-frame {
+                padding: 16px;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.75rem;
+                line-height: 1.15;
+            }
+            
+            .hero-sub {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+            
+            /* Phone mockup scaling */
+            .app-phones {
+                transform: scale(0.85);
+                margin: -20px 0;
+            }
+            
+            /* BarleyX section stack */
+            .barleyx-grid {
+                gap: 32px;
+            }
+            
+            /* Contact form full width */
+            .contact-grid {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products-grid .product-card,
+            .process-item,
+            .app-feature,
+            .card-grid .card {
+                flex: 0 0 260px;
+            }
+            
+            .benefits-grid .benefit-card {
+                flex: 0 0 240px;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.5rem;
+            }
+            
+            .stats-strip {
+                padding: 28px 20px;
+            }
+            
+            .stat-item h3 {
+                font-size: 1.3rem;
+            }
+            
+            .stat-icon {
+                width: 36px;
+                height: 36px;
+                margin-bottom: 12px;
+            }
+            
+            section {
+                padding: 48px 0;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2092,7 +2401,7 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-frame">
-            <img src="https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=2000&q=80" alt="Hydroponic growing system">
+            <img src="/hero.jpg" alt="Hydroponic fodder growing system">
             <div class="hero-overlay">
                 <div class="hero-content">
                     <h1>100% Natural Fodder Grown on Your Site</h1>
@@ -2170,6 +2479,7 @@
                         <p>Manage the levels of consumables within your system</p>
                         <a href="#contact" class="app-feature-link">Learn more →</a>
                     </div>
+                    <p class="swipe-hint">Swipe to see more</p>
                 </div>
                 
                 <div class="app-phones reveal-right">
@@ -2377,6 +2687,7 @@
                     </div>
                 </div>
             </div>
+            <p class="swipe-hint">Swipe to see more</p>
         </div>
     </section>
 
@@ -2419,6 +2730,7 @@
                     </div>
                 </div>
             </div>
+            <p class="swipe-hint">Swipe to see more</p>
         </div>
     </section>
 
@@ -2463,6 +2775,7 @@
                     <p>Energy-efficient LED lighting and advanced climate control reduce consumption.</p>
                 </div>
             </div>
+            <p class="swipe-hint">Swipe to see more</p>
         </div>
     </section>
 
