@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -1300,6 +1300,19 @@
             padding: 80px 0;
         }
 
+        .barleyx-frame {
+            background: #1a1f1c;
+            border-radius: 24px;
+            padding: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .barleyx-frame {
+                padding: 32px 24px;
+                border-radius: 20px;
+            }
+        }
+
         .barleyx-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -1314,12 +1327,18 @@
             }
         }
 
+        .barleyx-frame .section-label {
+            color: var(--accent);
+        }
+
         .barleyx-content h2 {
             margin-bottom: 16px;
+            color: #fff;
         }
 
         .barleyx-content > p {
             margin-bottom: 28px;
+            color: rgba(255,255,255,0.7);
         }
 
         .barleyx-features {
@@ -1342,8 +1361,8 @@
         .barleyx-feature-icon {
             width: 44px;
             height: 44px;
-            background: var(--bg-white);
-            border: 1px solid var(--border);
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -1354,19 +1373,19 @@
         .barleyx-feature-icon svg {
             width: 22px;
             height: 22px;
-            stroke: var(--text-body);
+            stroke: rgba(255,255,255,0.7);
         }
 
         .barleyx-feature h4 {
             font-size: 0.95rem;
             font-weight: 600;
-            color: var(--text-primary);
+            color: #fff;
             margin-bottom: 4px;
         }
 
         .barleyx-feature p {
             font-size: 0.85rem;
-            color: var(--text-muted);
+            color: rgba(255,255,255,0.6);
             line-height: 1.5;
         }
 
@@ -2147,8 +2166,8 @@
                 -webkit-overflow-scrolling: touch;
                 gap: 16px;
                 padding-bottom: 16px;
-                margin: 0 -24px;
-                padding-left: 24px;
+                margin-left: 0;
+                margin-right: -24px;
                 padding-right: 24px;
             }
             
@@ -2157,29 +2176,43 @@
             }
             
             .products-grid .product-card {
-                flex: 0 0 280px;
+                flex: 0 0 85vw;
+                max-width: 300px;
                 scroll-snap-align: start;
             }
             
+            .products-grid .product-card:first-child {
+                margin-left: 0;
+            }
+            
+            .products-frame .section-header {
+                margin-bottom: 24px;
+            }
+            
             /* Process Steps - Horizontal Scroll */
-            .process-section {
+            #process .section-header {
+                margin-bottom: 24px;
+            }
+            
+            .process-items {
                 display: flex;
                 overflow-x: auto;
                 scroll-snap-type: x mandatory;
                 -webkit-overflow-scrolling: touch;
                 gap: 16px;
                 padding-bottom: 16px;
-                margin: 0 -24px;
-                padding-left: 24px;
+                margin-left: 0;
+                margin-right: -24px;
                 padding-right: 24px;
             }
             
-            .process-section::-webkit-scrollbar {
+            .process-items::-webkit-scrollbar {
                 display: none;
             }
             
             .process-item {
-                flex: 0 0 280px;
+                flex: 0 0 85vw;
+                max-width: 300px;
                 scroll-snap-align: start;
                 border-bottom: none !important;
                 padding: 24px;
@@ -2189,6 +2222,10 @@
             }
             
             /* Benefits Grid - Horizontal Scroll */
+            #sustainability .section-header {
+                margin-bottom: 24px;
+            }
+            
             .benefits-grid {
                 display: flex;
                 overflow-x: auto;
@@ -2196,8 +2233,8 @@
                 -webkit-overflow-scrolling: touch;
                 gap: 16px;
                 padding-bottom: 16px;
-                margin: 0 -24px;
-                padding-left: 24px;
+                margin-left: 0;
+                margin-right: -24px;
                 padding-right: 24px;
             }
             
@@ -2206,20 +2243,25 @@
             }
             
             .benefits-grid .benefit-card {
-                flex: 0 0 260px;
+                flex: 0 0 85vw;
+                max-width: 280px;
                 scroll-snap-align: start;
             }
             
             /* App Features - Horizontal Scroll */
+            .app-header {
+                margin-bottom: 24px;
+            }
+            
             .app-features {
                 display: flex;
+                flex-direction: row;
                 overflow-x: auto;
                 scroll-snap-type: x mandatory;
                 -webkit-overflow-scrolling: touch;
-                gap: 12px;
+                gap: 16px;
                 padding-bottom: 16px;
-                margin: 0 -24px;
-                padding-left: 24px;
+                margin-right: -24px;
                 padding-right: 24px;
             }
             
@@ -2228,8 +2270,23 @@
             }
             
             .app-feature {
-                flex: 0 0 280px;
+                flex: 0 0 85vw;
+                max-width: 300px;
                 scroll-snap-align: start;
+                padding: 20px;
+                background: var(--bg-white);
+                border-radius: 12px;
+                border: 1px solid var(--border);
+                border-left: 3px solid var(--accent);
+            }
+            
+            /* Hide phone mockups on mobile */
+            .app-phones {
+                display: none !important;
+            }
+            
+            .app-grid {
+                display: block;
             }
             
             /* Specs Tabs - Scrollable */
@@ -2315,12 +2372,6 @@
                 line-height: 1.5;
             }
             
-            /* Phone mockup scaling */
-            .app-phones {
-                transform: scale(0.85);
-                margin: -20px 0;
-            }
-            
             /* BarleyX section stack */
             .barleyx-grid {
                 gap: 32px;
@@ -2337,11 +2388,13 @@
             .process-item,
             .app-feature,
             .card-grid .card {
-                flex: 0 0 260px;
+                flex: 0 0 90vw;
+                max-width: 280px;
             }
             
             .benefits-grid .benefit-card {
-                flex: 0 0 240px;
+                flex: 0 0 90vw;
+                max-width: 260px;
             }
             
             .hero-content h1 {
@@ -2479,8 +2532,8 @@
                         <p>Manage the levels of consumables within your system</p>
                         <a href="#contact" class="app-feature-link">Learn more →</a>
                     </div>
-                    <p class="swipe-hint">Swipe to see more</p>
                 </div>
+                <p class="swipe-hint">Swipe to see more</p>
                 
                 <div class="app-phones reveal-right">
                     <div class="phone-mockup">
@@ -2588,119 +2641,56 @@
     <!-- BarleyX -->
     <section class="barleyx-section" id="barleyx">
         <div class="container">
-            <div class="barleyx-grid">
-                <div class="barleyx-content reveal-left">
-                    <span class="section-label">Our Seed</span>
-                    <h2>BarleyX</h2>
-                    <p>Barley X is a unique variety of seed specially grown and optimised to provide you with high yielding Fodder.</p>
-                    
-                    <a href="mailto:info@foddercube.com?subject=BarleyX%20Data%20Request" class="btn btn-green" style="margin-bottom: 32px;">
-                        Request nutritional data →
-                    </a>
+            <div class="barleyx-frame">
+                <div class="barleyx-grid">
+                    <div class="barleyx-content reveal-left">
+                        <span class="section-label">Our Seed</span>
+                        <h2>BarleyX</h2>
+                        <p>Barley X is a unique variety of seed specially grown and optimised to provide you with high yielding Fodder.</p>
+                        
+                        <a href="mailto:info@foddercube.com?subject=BarleyX%20Data%20Request" class="btn btn-green" style="margin-bottom: 32px;">
+                            Request nutritional data →
+                        </a>
 
-                    <div class="barleyx-features">
-                        <div class="barleyx-feature">
-                            <div class="barleyx-feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+                        <div class="barleyx-features">
+                            <div class="barleyx-feature">
+                                <div class="barleyx-feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+                                </div>
+                                <div>
+                                    <h4>High Nutritional Content</h4>
+                                    <p>Barley X is a proprietary variety developed by RKD Bio, having a high nutritional content</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4>High Nutritional Content</h4>
-                                <p>Barley X is a proprietary variety developed by RKD Bio, having a high nutritional content</p>
+                            <div class="barleyx-feature">
+                                <div class="barleyx-feature-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                </div>
+                                <div>
+                                    <h4>Fast Growing</h4>
+                                    <p>Optimised to work efficiently in the FodderCube Systems, Barley X grows in 5 days.</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="barleyx-feature">
-                            <div class="barleyx-feature-icon">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                            </div>
-                            <div>
-                                <h4>Fast Growing</h4>
-                                <p>Optimised to work efficiently in the FodderCube Systems, Barley X grows in 5 days.</p>
-                            </div>
-                        </div>
                     </div>
-                </div>
-                <div class="barleyx-image reveal-right">
-                    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1000&q=80" alt="BarleyX sprouted fodder">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Systems -->
-    <section id="systems">
-        <div class="container">
-            <div class="products-frame">
-                <div class="section-header reveal">
-                    <span class="section-label">Our Systems</span>
-                    <h2>Choose your capacity</h2>
-                    <p>Each FodderCube is custom designed to your requirements. Self-contained units requiring only power and water, with IoT-based AI controlled management.</p>
-                </div>
-
-                <div class="products-grid stagger-children">
-                    <div class="product-card">
-                        <span class="product-label">Entry</span>
-                        <h3 class="product-name">Cube 50</h3>
-                        <div class="product-capacity">50</div>
-                        <div class="product-unit">kg / day</div>
-                        <p class="product-specs">
-                            5–10 horses<br>
-                            2.4 × 2.4m footprint<br>
-                            Compact design
-                        </p>
-                        <a href="#contact" class="product-link">Request quote →</a>
-                    </div>
-                    <div class="product-card">
-                        <span class="product-label">Standard</span>
-                        <h3 class="product-name">Cube 150</h3>
-                        <div class="product-capacity">150</div>
-                        <div class="product-unit">kg / day</div>
-                        <p class="product-specs">
-                            15–30 horses<br>
-                            3.0 × 3.0m footprint<br>
-                            Mid-range capacity
-                        </p>
-                        <a href="#contact" class="product-link">Request quote →</a>
-                    </div>
-                    <div class="product-card featured">
-                        <span class="product-label">Commercial</span>
-                        <h3 class="product-name">Cube 300</h3>
-                        <div class="product-capacity">300</div>
-                        <div class="product-unit">kg / day</div>
-                        <p class="product-specs">
-                            30–60 horses<br>
-                            4.0 × 4.0 × 3.0m<br>
-                            6KW/h • 200L water/day
-                        </p>
-                        <a href="#contact" class="product-link">Request quote →</a>
-                    </div>
-                    <div class="product-card">
-                        <span class="product-label">Enterprise</span>
-                        <h3 class="product-name">Cube 500+</h3>
-                        <div class="product-capacity">500+</div>
-                        <div class="product-unit">kg / day</div>
-                        <p class="product-specs">
-                            60+ horses<br>
-                            Modular config<br>
-                            Custom design
-                        </p>
-                        <a href="#contact" class="product-link">Request quote →</a>
+                    <div class="barleyx-image reveal-right">
+                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=1000&q=80" alt="BarleyX sprouted fodder">
                     </div>
                 </div>
             </div>
-            <p class="swipe-hint">Swipe to see more</p>
         </div>
     </section>
 
     <!-- Process -->
     <section id="process">
         <div class="container">
-            <div class="process-section">
-                <div class="section-header reveal">
-                    <span class="section-label">The Process</span>
-                    <h2>From seed to feed in five days</h2>
-                    <p>A continuous cycle that produces fresh, nutrient-rich fodder every day.</p>
-                </div>
+            <div class="section-header reveal">
+                <span class="section-label">The Process</span>
+                <h2>From seed to feed in five days</h2>
+                <p>A continuous cycle that produces fresh, nutrient-rich fodder every day.</p>
+            </div>
 
+            <div class="process-items">
                 <div class="process-item reveal">
                     <div class="process-number">01</div>
                     <div class="process-content">
@@ -2773,6 +2763,71 @@
                     <h4>Energy Efficiency</h4>
                     <div class="stat">70%</div>
                     <p>Energy-efficient LED lighting and advanced climate control reduce consumption.</p>
+                </div>
+            </div>
+            <p class="swipe-hint">Swipe to see more</p>
+        </div>
+    </section>
+
+    <!-- Systems -->
+    <section id="systems">
+        <div class="container">
+            <div class="products-frame">
+                <div class="section-header reveal">
+                    <span class="section-label">Our Systems</span>
+                    <h2>Choose your capacity</h2>
+                    <p>Each FodderCube is custom designed to your requirements. Self-contained units requiring only power and water, with IoT-based AI controlled management.</p>
+                </div>
+
+                <div class="products-grid stagger-children">
+                    <div class="product-card">
+                        <span class="product-label">Entry</span>
+                        <h3 class="product-name">Cube 50</h3>
+                        <div class="product-capacity">50</div>
+                        <div class="product-unit">kg / day</div>
+                        <p class="product-specs">
+                            5–10 horses<br>
+                            2.4 × 2.4m footprint<br>
+                            Compact design
+                        </p>
+                        <a href="#contact" class="product-link">Request quote →</a>
+                    </div>
+                    <div class="product-card">
+                        <span class="product-label">Standard</span>
+                        <h3 class="product-name">Cube 150</h3>
+                        <div class="product-capacity">150</div>
+                        <div class="product-unit">kg / day</div>
+                        <p class="product-specs">
+                            15–30 horses<br>
+                            3.0 × 3.0m footprint<br>
+                            Mid-range capacity
+                        </p>
+                        <a href="#contact" class="product-link">Request quote →</a>
+                    </div>
+                    <div class="product-card featured">
+                        <span class="product-label">Commercial</span>
+                        <h3 class="product-name">Cube 300</h3>
+                        <div class="product-capacity">300</div>
+                        <div class="product-unit">kg / day</div>
+                        <p class="product-specs">
+                            30–60 horses<br>
+                            4.0 × 4.0 × 3.0m<br>
+                            6KW/h • 200L water/day
+                        </p>
+                        <a href="#contact" class="product-link">Request quote →</a>
+                    </div>
+                    <div class="product-card">
+                        <span class="product-label">Enterprise</span>
+                        <h3 class="product-name">Cube 500+</h3>
+                        <div class="product-capacity">500+</div>
+                        <div class="product-unit">kg / day</div>
+                        <p class="product-specs">
+                            60+ horses<br>
+                            Modular config<br>
+                            Custom design
+                        </p>
+                        <a href="#contact" class="product-link">Request quote →</a>
+                    </div>
                 </div>
             </div>
             <p class="swipe-hint">Swipe to see more</p>
