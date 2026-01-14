@@ -1,4 +1,4 @@
-<!DOCTYPE html><!DOCTYPE html><!DOCTYPE html><!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,8 +28,8 @@
     <meta name="twitter:image" content="https://foddercube.com/hero.jpg">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/images/favicon.png">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/f3.png">
+    <link rel="apple-touch-icon" href="/f3.png">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -278,29 +278,17 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
         }
 
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            background: var(--accent);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .logo-img {
+            height: 40px;
+            width: auto;
         }
 
-        .logo-icon svg {
-            width: 18px;
-            height: 18px;
-            fill: white;
-        }
-
-        .logo-text {
-            font-size: 1.125rem;
-            font-weight: 600;
-            color: var(--text-primary);
+        @media (max-width: 768px) {
+            .logo-img {
+                height: 32px;
+            }
         }
 
         .nav-links {
@@ -2130,7 +2118,7 @@
 
         /* Footer */
         footer {
-            padding: 32px 0;
+            padding: 40px 0;
             background: var(--bg-white);
             border-top: 1px solid var(--border);
         }
@@ -2140,12 +2128,29 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
             gap: 16px;
+        }
+
+        .footer-logo {
+            height: 32px;
+            width: auto;
         }
 
         .footer-text {
             font-size: 0.85rem;
             color: var(--text-muted);
+        }
+
+        .footer-right {
+            display: flex;
+            align-items: center;
+            gap: 32px;
         }
 
         .footer-links {
@@ -2160,6 +2165,39 @@
 
         .footer-links a:hover {
             color: var(--accent);
+        }
+
+        .footer-rkd {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-rkd span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .footer-rkd img {
+            height: 20px;
+            width: auto;
+        }
+
+        @media (max-width: 768px) {
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-brand {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .footer-right {
+                flex-direction: column;
+                gap: 16px;
+            }
         }
 
         /* Divider */
@@ -2467,10 +2505,7 @@
         <div class="container">
             <div class="nav-inner">
                 <a href="#" class="logo">
-                    <div class="logo-icon">
-                        <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/></svg>
-                    </div>
-                    <span class="logo-text">FodderCube</span>
+                    <img src="/f3.png" alt="FodderCube" class="logo-img">
                 </a>
                 <ul class="nav-links">
                     <li><a href="#systems">Systems</a></li>
@@ -3195,11 +3230,19 @@
     <footer>
         <div class="container">
             <div class="footer-inner">
-                <p class="footer-text">© 2026 FodderCube. A division of RKD Bio. Made in UAE 🇦🇪</p>
-                <div class="footer-links">
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="https://rkdbio.com">RKD Bio</a>
+                <div class="footer-brand">
+                    <img src="/f3.png" alt="FodderCube" class="footer-logo">
+                    <p class="footer-text">© 2026 FodderCube. Made in UAE 🇦🇪</p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                    </div>
+                    <a href="https://rkdbio.com" class="footer-rkd">
+                        <span>A division of</span>
+                        <img src="/rkdlogo.png" alt="RKD Bio">
+                    </a>
                 </div>
             </div>
         </div>
