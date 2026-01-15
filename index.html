@@ -3437,4 +3437,18 @@
                     }
                 })
                 .catch(error => {
-                    alert('There was an error. Please
+                    alert('There was an error. Please try again.');
+                });
+            });
+        }
+        
+        function resetForm() {
+            const contactForm = document.getElementById('contactForm');
+            const formSuccess = document.getElementById('formSuccess');
+            contactForm.reset();
+            contactForm.style.display = 'block';
+            formSuccess.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
