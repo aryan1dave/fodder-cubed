@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FodderCube — Hydroponic Fodder Systems | Fresh Feed in 5 Days</title>
+    <title>FodderCubed — Hydroponic Fodder Systems | Fresh Feed in 5 Days</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="FodderCube hydroponic fodder systems produce fresh, nutritious feed in just 5 days using 95% less water. Self-contained units engineered for any climate. From RKD Bio.">
+    <meta name="description" content="FodderCubed hydroponic fodder systems produce fresh, nutritious feed in just 5 days using 95% less water. Self-contained units engineered for any climate. From RKD Bio.">
     <meta name="keywords" content="hydroponic fodder, fodder system, horse feed, equine nutrition, fresh fodder, water efficient farming, sustainable agriculture, indoor farming, barley fodder, UAE agriculture">
-    <meta name="author" content="FodderCube by RKD Bio">
+    <meta name="author" content="FodderCubed by RKD Bio">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://foddercube.com">
+    <link rel="canonical" href="https://foddercubed.com">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://foddercube.com">
-    <meta property="og:title" content="FodderCube — Hydroponic Fodder Systems">
+    <meta property="og:url" content="https://foddercubed.com">
+    <meta property="og:title" content="FodderCubed — Hydroponic Fodder Systems">
     <meta property="og:description" content="Fresh fodder in 5 days. 95% less water. Self-contained hydroponic systems engineered for any climate.">
-    <meta property="og:image" content="https://foddercube.com/hero.jpg">
-    <meta property="og:site_name" content="FodderCube">
+    <meta property="og:image" content="https://foddercubed.com/hero.jpg">
+    <meta property="og:site_name" content="FodderCubed">
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://foddercube.com">
-    <meta name="twitter:title" content="FodderCube — Hydroponic Fodder Systems">
+    <meta name="twitter:url" content="https://foddercubed.com">
+    <meta name="twitter:title" content="FodderCubed — Hydroponic Fodder Systems">
     <meta name="twitter:description" content="Fresh fodder in 5 days. 95% less water. Self-contained hydroponic systems engineered for any climate.">
-    <meta name="twitter:image" content="https://foddercube.com/hero.jpg">
+    <meta name="twitter:image" content="https://foddercubed.com/hero.jpg">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/f3.png">
@@ -36,11 +36,11 @@
     {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "FodderCube Hydroponic Fodder System",
+        "name": "FodderCubed Hydroponic Fodder System",
         "description": "Self-contained hydroponic fodder growing system that produces fresh feed in 5 days using 95% less water than traditional farming.",
         "brand": {
             "@type": "Brand",
-            "name": "FodderCube"
+            "name": "FodderCubed"
         },
         "manufacturer": {
             "@type": "Organization",
@@ -1208,9 +1208,10 @@
         }
 
         .product-card:hover {
+            background: var(--accent);
             border-color: var(--accent);
             transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 40px rgba(74,90,66,0.3);
         }
 
         .product-card.featured {
@@ -1219,6 +1220,8 @@
         }
 
         .product-card.featured:hover {
+            background: var(--accent-light);
+            border-color: var(--accent-light);
             transform: translateY(-8px) scale(1.02);
             box-shadow: 0 25px 50px rgba(74,90,66,0.4);
         }
@@ -1231,6 +1234,11 @@
             text-transform: uppercase;
             margin-bottom: 16px;
             display: block;
+            transition: color 0.4s ease;
+        }
+
+        .product-card:hover .product-label {
+            color: rgba(255,255,255,0.7);
         }
 
         .product-card.featured .product-label {
@@ -1260,6 +1268,11 @@
             font-size: 0.85rem;
             color: rgba(255,255,255,0.5);
             margin-bottom: 20px;
+            transition: color 0.4s ease;
+        }
+
+        .product-card:hover .product-unit {
+            color: rgba(255,255,255,0.7);
         }
 
         .product-card.featured .product-unit {
@@ -1271,6 +1284,11 @@
             color: rgba(255,255,255,0.65);
             line-height: 1.8;
             margin-bottom: 20px;
+            transition: color 0.4s ease;
+        }
+
+        .product-card:hover .product-specs {
+            color: rgba(255,255,255,0.85);
         }
 
         .product-card.featured .product-specs {
@@ -1287,12 +1305,21 @@
             padding: 10px 20px;
             border: 1px solid rgba(255,255,255,0.3);
             border-radius: 100px;
-            transition: all 0.25s ease;
+            transition: all 0.4s ease;
         }
 
         .product-link:hover {
             border-color: #fff;
             background: rgba(255,255,255,0.1);
+        }
+
+        .product-card:hover .product-link {
+            background: rgba(0,0,0,0.15);
+            border-color: rgba(0,0,0,0.2);
+        }
+
+        .product-card:hover .product-link:hover {
+            background: rgba(0,0,0,0.25);
         }
 
         .product-card.featured .product-link {
@@ -2524,7 +2551,7 @@
         <div class="container">
             <div class="nav-inner">
                 <a href="#" class="logo">
-                    <img src="/f3.png" alt="FodderCube" class="logo-img">
+                    <img src="/f3.png" alt="FodderCubed" class="logo-img">
                 </a>
                 <ul class="nav-links">
                     <li><a href="#systems">Systems</a></li>
@@ -2600,14 +2627,14 @@
             <div class="app-header reveal">
                 <span class="section-label">Features</span>
                 <h2>Manage your Fodder Growth</h2>
-                <p>Using the FodderCube App you can manage your Fodder Systems from anywhere.</p>
+                <p>Using the FodderCubed App you can manage your Fodder Systems from anywhere.</p>
             </div>
 
             <div class="app-grid">
                 <div class="app-features stagger-children">
                     <div class="app-feature">
                         <h4>Manage how much Fodder to Grow Each Day</h4>
-                        <p>Dynamically change the amount of fodder you require through the App, the FodderCube system adapts automatically</p>
+                        <p>Dynamically change the amount of fodder you require through the App, the FodderCubed system adapts automatically</p>
                         <a href="#contact" class="app-feature-link">Learn more →</a>
                     </div>
                     <div class="app-feature">
@@ -2636,7 +2663,7 @@
                                     </div>
                                 </div>
                                 <div class="phone-header">
-                                    <img src="/f3.png" alt="FodderCube" class="phone-logo">
+                                    <img src="/f3.png" alt="FodderCubed" class="phone-logo">
                                     <div>
                                         <div class="phone-title">Dashboard</div>
                                         <div class="phone-subtitle">Daily Overview</div>
@@ -2682,7 +2709,7 @@
                                     </div>
                                 </div>
                                 <div class="phone-header">
-                                    <img src="/f3.png" alt="FodderCube" class="phone-logo">
+                                    <img src="/f3.png" alt="FodderCubed" class="phone-logo">
                                     <div>
                                         <div class="phone-title">Growth Control</div>
                                         <div class="phone-subtitle">Settings</div>
@@ -2731,7 +2758,7 @@
                         <h2>BarleyX</h2>
                         <p>Barley X is a unique variety of seed specially grown and optimised to provide you with high yielding Fodder.</p>
                         
-                        <a href="mailto:info@foddercube.com?subject=BarleyX%20Data%20Request" class="btn btn-green" style="margin-bottom: 32px;">
+                        <a href="mailto:info@rkdbio.com?subject=BarleyX%20Data%20Request" class="btn btn-green" style="margin-bottom: 32px;">
                             Request nutritional data →
                         </a>
 
@@ -2751,7 +2778,7 @@
                                 </div>
                                 <div>
                                     <h4>Fast Growing</h4>
-                                    <p>Optimised to work efficiently in the FodderCube Systems, Barley X grows in 5 days.</p>
+                                    <p>Optimised to work efficiently in the FodderCubed Systems, Barley X grows in 5 days.</p>
                                 </div>
                             </div>
                         </div>
@@ -2812,7 +2839,7 @@
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-label">Why Cube Farming</span>
-                <h2>What problems does FodderCube address?</h2>
+                <h2>What problems does FodderCubed address?</h2>
                 <p>Cube farming tackles several key issues in agriculture — solving limited land, conserving water, and reducing food miles for fresher produce with lower carbon emissions.</p>
             </div>
 
@@ -2859,7 +2886,7 @@
                 <div class="section-header reveal">
                     <span class="section-label">Our Systems</span>
                     <h2>Choose your capacity</h2>
-                    <p>Each FodderCube is custom designed to your requirements. Self-contained units requiring only power and water, with IoT-based AI controlled management.</p>
+                    <p>Each FodderCubed is custom designed to your requirements. Self-contained units requiring only power and water, with IoT-based AI controlled management.</p>
                 </div>
 
                 <div class="products-grid stagger-children">
@@ -3101,7 +3128,7 @@
                 <div class="two-col-content">
                     <span class="section-label">Extreme Conditions</span>
                     <h2>Built for harsh environments</h2>
-                    <p>FodderCube systems are engineered for extreme conditions. With +54°C ambient operating temperature capability and optional solar power, deploy anywhere.</p>
+                    <p>FodderCubed systems are engineered for extreme conditions. With +54°C ambient operating temperature capability and optional solar power, deploy anywhere.</p>
                     
                     <div class="feature-list">
                         <div class="feature-item">
@@ -3129,7 +3156,7 @@
     <section class="quote-section">
         <div class="quote-inner reveal">
             <div class="quote-mark">"</div>
-            <p class="quote-text">FodderCube transformed our feeding program. Water costs down 90%, and our horses have never performed better. The consistency is remarkable.</p>
+            <p class="quote-text">FodderCubed transformed our feeding program. Water costs down 90%, and our horses have never performed better. The consistency is remarkable.</p>
             <div class="quote-author">
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80" alt="Ahmed Al-Mansour" class="quote-avatar">
                 <div class="quote-author-info">
@@ -3146,7 +3173,7 @@
             <div class="cta-banner reveal-scale">
                 <div class="cta-banner-content">
                     <h2>Want to learn more about our work?</h2>
-                    <p>Get in touch with our team to discuss how FodderCube can transform your feeding operation.</p>
+                    <p>Get in touch with our team to discuss how FodderCubed can transform your feeding operation.</p>
                     <div class="cta-banner-buttons">
                         <a href="#contact" class="btn btn-outline-white">Learn more</a>
                         <a href="#contact" class="btn btn-white">Contact us</a>
@@ -3166,7 +3193,7 @@
                 <div class="contact-info reveal-left">
                     <span class="section-label">Get Started</span>
                     <h2>Let's configure your system</h2>
-                    <p>Tell us about your operation and we'll recommend the right FodderCube. Our team responds within 24 hours.</p>
+                    <p>Tell us about your operation and we'll recommend the right FodderCubed. Our team responds within 24 hours.</p>
 
                     <div class="contact-details">
                         <div class="contact-item">
@@ -3241,8 +3268,8 @@
         <div class="container">
             <div class="footer-inner">
                 <div class="footer-brand">
-                    <img src="/f3.png" alt="FodderCube" class="footer-logo">
-                    <p class="footer-text">© 2026 FodderCube. Made in UAE 🇦🇪</p>
+                    <img src="/f3.png" alt="FodderCubed" class="footer-logo">
+                    <p class="footer-text">© 2026 FodderCubed. Made in UAE 🇦🇪</p>
                 </div>
                 <div class="footer-right">
                     <div class="footer-links">
